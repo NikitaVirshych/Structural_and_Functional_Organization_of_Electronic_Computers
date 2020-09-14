@@ -22,9 +22,9 @@ applicable agreement for further details.
 (header "graphic" (version "1.3"))
 (pin
 	(input)
-	(rect -8 -8 160 8)
+	(rect -8 200 160 216)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "D[7..0]" (rect 5 0 39 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -38,9 +38,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -8 200 160 216)
+	(rect -24 -56 144 -40)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
+	(text "D[7..0]" (rect 5 0 39 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12)(line_width 1))
@@ -298,7 +298,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 88 32 104 64)
+	(rect 88 160 104 192)
 	(text "VCC" (rect 0 5 10 25)(font "Arial" (font_size 6))(vertical))
 	(text "inst17" (rect 5 0 17 29)(font "Arial" )(vertical)(invisible))
 	(port
@@ -331,10 +331,35 @@ applicable agreement for further details.
 	)
 	(rotate270)
 )
-(connector
-	(text "D[6]" (rect 418 56 439 68)(font "Arial" ))
-	(pt 408 72)
-	(pt 448 72)
+(symbol
+	(rect 160 -88 320 8)
+	(text "lpm_add_sub1" (rect 38 1 137 17)(font "Arial" (font_size 10)))
+	(text "inst5" (rect 8 80 31 92)(font "Arial" ))
+	(port
+		(pt 0 40)
+		(input)
+		(text "dataa[7..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "dataa[7..0]" (rect 4 27 64 41)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 64 40)(line_width 3))
+	)
+	(port
+		(pt 160 56)
+		(output)
+		(text "result[7..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "result[7..0]" (rect 106 43 166 57)(font "Arial" (font_size 8)))
+		(line (pt 160 56)(pt 96 56)(line_width 3))
+	)
+	(drawing
+		(text "1" (rect 10 59 17 73)(font "Arial" (font_size 8)))
+		(text "A" (rect 66 34 75 48)(font "Arial" (font_size 8)))
+		(text "B" (rect 66 66 74 80)(font "Arial" (font_size 8)))
+		(text "A-B" (rect 75 50 97 64)(font "Arial" (font_size 8)))
+		(line (pt 64 32)(pt 96 40)(line_width 1))
+		(line (pt 96 40)(pt 96 72)(line_width 1))
+		(line (pt 96 72)(pt 64 80)(line_width 1))
+		(line (pt 64 80)(pt 64 32)(line_width 1))
+		(line (pt 8 72)(pt 64 72)(line_width 3))
+	)
 )
 (connector
 	(text "Q[3]" (rect 362 168 383 180)(font "Arial" ))
@@ -342,19 +367,9 @@ applicable agreement for further details.
 	(pt 448 184)
 )
 (connector
-	(text "D[3]" (rect 418 152 439 164)(font "Arial" ))
-	(pt 408 168)
-	(pt 448 168)
-)
-(connector
 	(text "Q[4]" (rect 362 136 383 148)(font "Arial" ))
 	(pt 352 152)
 	(pt 448 152)
-)
-(connector
-	(text "D[4]" (rect 418 120 439 132)(font "Arial" ))
-	(pt 408 136)
-	(pt 448 136)
 )
 (connector
 	(text "Q[2]" (rect 362 200 383 212)(font "Arial" ))
@@ -362,29 +377,14 @@ applicable agreement for further details.
 	(pt 448 216)
 )
 (connector
-	(text "D[1]" (rect 418 216 439 228)(font "Arial" ))
-	(pt 408 232)
-	(pt 448 232)
-)
-(connector
 	(text "Q[1]" (rect 362 232 383 244)(font "Arial" ))
 	(pt 352 248)
 	(pt 448 248)
 )
 (connector
-	(text "D[0]" (rect 418 248 439 260)(font "Arial" ))
-	(pt 408 264)
-	(pt 448 264)
-)
-(connector
 	(text "Q[0]" (rect 362 264 383 276)(font "Arial" ))
 	(pt 352 280)
 	(pt 448 280)
-)
-(connector
-	(text "D[2]" (rect 418 184 439 196)(font "Arial" ))
-	(pt 408 200)
-	(pt 448 200)
 )
 (connector
 	(text "Q[7]" (rect 362 40 383 52)(font "Arial" ))
@@ -397,19 +397,9 @@ applicable agreement for further details.
 	(pt 448 120)
 )
 (connector
-	(text "D[5]" (rect 418 88 439 100)(font "Arial" ))
-	(pt 408 104)
-	(pt 448 104)
-)
-(connector
 	(text "Q[6]" (rect 362 72 383 84)(font "Arial" ))
 	(pt 352 88)
 	(pt 448 88)
-)
-(connector
-	(text "D[7]" (rect 418 24 439 36)(font "Arial" ))
-	(pt 408 40)
-	(pt 448 40)
 )
 (connector
 	(pt 160 64)
@@ -436,23 +426,9 @@ applicable agreement for further details.
 	(pt 176 160)
 )
 (connector
-	(pt 112 176)
-	(pt 176 176)
-)
-(connector
-	(pt 112 176)
-	(pt 112 48)
-)
-(connector
 	(text "Q[7..0]" (rect 314 32 348 44)(font "Arial" ))
 	(pt 304 48)
 	(pt 352 48)
-	(bus)
-)
-(connector
-	(text "D[7..0]" (rect 170 -16 204 -4)(font "Arial" ))
-	(pt 160 0)
-	(pt 408 0)
 	(bus)
 )
 (connector
@@ -493,16 +469,6 @@ applicable agreement for further details.
 (connector
 	(pt 352 248)
 	(pt 352 280)
-	(bus)
-)
-(connector
-	(pt 408 0)
-	(pt 408 40)
-	(bus)
-)
-(connector
-	(pt 408 40)
-	(pt 408 72)
 	(bus)
 )
 (connector
@@ -564,10 +530,6 @@ applicable agreement for further details.
 	(pt 160 160)
 )
 (connector
-	(pt 160 64)
-	(pt 160 80)
-)
-(connector
 	(pt -16 336)
 	(pt -16 192)
 )
@@ -578,14 +540,6 @@ applicable agreement for further details.
 (connector
 	(pt -16 336)
 	(pt 576 336)
-)
-(connector
-	(pt 104 48)
-	(pt 112 48)
-)
-(connector
-	(pt 112 48)
-	(pt 176 48)
 )
 (connector
 	(pt 160 208)
@@ -602,6 +556,83 @@ applicable agreement for further details.
 (connector
 	(pt 576 168)
 	(pt 624 168)
+)
+(connector
+	(pt 104 176)
+	(pt 176 176)
+)
+(connector
+	(pt 160 48)
+	(pt 176 48)
+)
+(connector
+	(pt 160 48)
+	(pt 160 64)
+)
+(connector
+	(pt 160 64)
+	(pt 160 80)
+)
+(connector
+	(pt 408 -32)
+	(pt 408 40)
+	(bus)
+)
+(connector
+	(pt 408 40)
+	(pt 408 72)
+	(bus)
+)
+(connector
+	(pt 144 -48)
+	(pt 160 -48)
+	(bus)
+)
+(connector
+	(text "Dm[7..0]" (rect 330 -48 373 -36)(font "Arial" ))
+	(pt 408 -32)
+	(pt 320 -32)
+	(bus)
+)
+(connector
+	(text "Dm[7]" (rect 418 24 448 36)(font "Arial" ))
+	(pt 408 40)
+	(pt 448 40)
+)
+(connector
+	(text "Dm[6]" (rect 418 56 448 68)(font "Arial" ))
+	(pt 408 72)
+	(pt 448 72)
+)
+(connector
+	(text "Dm[5]" (rect 418 88 448 100)(font "Arial" ))
+	(pt 408 104)
+	(pt 448 104)
+)
+(connector
+	(text "Dm[4]" (rect 418 120 448 132)(font "Arial" ))
+	(pt 408 136)
+	(pt 448 136)
+)
+(connector
+	(text "Dm[3]" (rect 418 152 448 164)(font "Arial" ))
+	(pt 408 168)
+	(pt 448 168)
+)
+(connector
+	(text "Dm[2]" (rect 418 184 448 196)(font "Arial" ))
+	(pt 408 200)
+	(pt 448 200)
+)
+(connector
+	(text "Dm[1]" (rect 418 216 448 228)(font "Arial" ))
+	(pt 408 232)
+	(pt 448 232)
+)
+(connector
+	(text "Dm[0]" (rect 418 248 448 260)(font "Arial" ))
+	(pt 408 264)
+	(pt 448 264)
 )
 (junction (pt 352 56))
 (junction (pt 352 88))
@@ -622,5 +653,5 @@ applicable agreement for further details.
 (junction (pt 160 112))
 (junction (pt 160 128))
 (junction (pt 160 144))
-(junction (pt 112 48))
 (junction (pt 576 168))
+(junction (pt 160 64))
