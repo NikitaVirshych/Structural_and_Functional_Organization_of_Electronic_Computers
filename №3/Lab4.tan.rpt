@@ -1,0 +1,429 @@
+Classic Timing Analyzer report for Lab4
+Tue Oct 13 10:29:16 2020
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'control[0]'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                                                                      ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------+------------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                                                                                                         ; To                                                                                                           ; From Clock ; To Clock   ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------+------------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.673 ns                                       ; address[2]                                                                                                   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; --         ; control[0] ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.356 ns                                       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[5]                                                                                                      ; control[0] ; --         ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 10.680 ns                                      ; address[2]                                                                                                   ; adr[3]                                                                                                       ; --         ; --         ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.490 ns                                      ; control[2]                                                                                                   ; inst6                                                                                                        ; --         ; control[0] ; 0            ;
+; Clock Setup: 'control[0]'    ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]                       ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ; control[0] ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                                                                                              ;                                                                                                              ;            ;            ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------+------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; control[0]      ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'control[0]'                                                                                                                                                                                                                                                                                                                                                    ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------+------------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                   ; To                                                                                                           ; From Clock ; To Clock   ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------+------------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ; control[0] ; None                        ; None                      ; 1.565 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ; control[0] ; None                        ; None                      ; 1.535 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ; control[0] ; None                        ; None                      ; 1.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ; control[0] ; None                        ; None                      ; 1.448 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ; control[0] ; None                        ; None                      ; 1.418 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; control[0] ; control[0] ; None                        ; None                      ; 1.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ; control[0] ; None                        ; None                      ; 1.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ; control[0] ; None                        ; None                      ; 1.388 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ; control[0] ; None                        ; None                      ; 1.371 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ; control[0] ; None                        ; None                      ; 1.366 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ; control[0] ; None                        ; None                      ; 1.358 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ; control[0] ; None                        ; None                      ; 1.357 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ; control[0] ; None                        ; None                      ; 1.311 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; control[0] ; control[0] ; None                        ; None                      ; 1.307 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ; control[0] ; None                        ; None                      ; 1.305 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ; control[0] ; None                        ; None                      ; 1.297 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; control[0] ; control[0] ; None                        ; None                      ; 1.290 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[5] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ; control[0] ; None                        ; None                      ; 1.250 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; control[0] ; control[0] ; None                        ; None                      ; 1.248 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; control[0] ; control[0] ; None                        ; None                      ; 1.173 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; control[0] ; control[0] ; None                        ; None                      ; 1.085 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[5]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.820 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[5]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.785 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.785 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[5]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.750 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.750 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.750 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[5]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[5]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[5] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[5]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]                       ; control[0] ; control[0] ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; inst6                                                                                  ; inst6                                                                                                        ; control[0] ; control[0] ; None                        ; None                      ; 0.396 ns                ;
++-------+------------------------------------------------+----------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------+------------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                                        ;
++-------+--------------+------------+------------+--------------------------------------------------------------------------------------------------------------+------------+
+; Slack ; Required tsu ; Actual tsu ; From       ; To                                                                                                           ; To Clock   ;
++-------+--------------+------------+------------+--------------------------------------------------------------------------------------------------------------+------------+
+; N/A   ; None         ; 4.673 ns   ; address[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A   ; None         ; 4.643 ns   ; address[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A   ; None         ; 4.596 ns   ; address[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ;
+; N/A   ; None         ; 4.384 ns   ; address[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; control[0] ;
+; N/A   ; None         ; 4.366 ns   ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A   ; None         ; 4.336 ns   ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A   ; None         ; 4.289 ns   ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ;
+; N/A   ; None         ; 4.225 ns   ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; control[0] ;
+; N/A   ; None         ; 4.186 ns   ; address[5] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A   ; None         ; 4.180 ns   ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; control[0] ;
+; N/A   ; None         ; 4.091 ns   ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; control[0] ;
+; N/A   ; None         ; 3.807 ns   ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A   ; None         ; 3.805 ns   ; address[4] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A   ; None         ; 3.777 ns   ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A   ; None         ; 3.740 ns   ; address[4] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A   ; None         ; 3.730 ns   ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ;
+; N/A   ; None         ; 3.714 ns   ; address[3] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A   ; None         ; 3.684 ns   ; address[3] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A   ; None         ; 3.631 ns   ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; control[0] ;
+; N/A   ; None         ; 3.609 ns   ; address[3] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ;
+; N/A   ; None         ; 3.580 ns   ; control[1] ; inst6                                                                                                        ; control[0] ;
+; N/A   ; None         ; 3.532 ns   ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; control[0] ;
+; N/A   ; None         ; 2.729 ns   ; control[2] ; inst6                                                                                                        ; control[0] ;
++-------+--------------+------------+------------+--------------------------------------------------------------------------------------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                                     ;
++-------+--------------+------------+--------------------------------------------------------------------------------------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                                         ; To      ; From Clock ;
++-------+--------------+------------+--------------------------------------------------------------------------------------------------------------+---------+------------+
+; N/A   ; None         ; 8.356 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; data[5] ; control[0] ;
+; N/A   ; None         ; 8.356 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; data[5] ; control[0] ;
+; N/A   ; None         ; 8.356 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; data[5] ; control[0] ;
+; N/A   ; None         ; 8.356 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; data[5] ; control[0] ;
+; N/A   ; None         ; 8.356 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; data[5] ; control[0] ;
+; N/A   ; None         ; 8.356 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[5] ; control[0] ;
+; N/A   ; None         ; 7.994 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; data[8] ; control[0] ;
+; N/A   ; None         ; 7.994 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; data[8] ; control[0] ;
+; N/A   ; None         ; 7.994 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; data[8] ; control[0] ;
+; N/A   ; None         ; 7.994 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; data[8] ; control[0] ;
+; N/A   ; None         ; 7.994 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; data[8] ; control[0] ;
+; N/A   ; None         ; 7.994 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[8] ; control[0] ;
+; N/A   ; None         ; 7.850 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]                       ; adr[3]  ; control[0] ;
+; N/A   ; None         ; 7.733 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0]                       ; adr[3]  ; control[0] ;
+; N/A   ; None         ; 7.673 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2]                       ; adr[3]  ; control[0] ;
+; N/A   ; None         ; 7.659 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3]                       ; adr[3]  ; control[0] ;
+; N/A   ; None         ; 7.179 ns   ; inst6                                                                                                        ; trig    ; control[0] ;
+; N/A   ; None         ; 7.094 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; data[6] ; control[0] ;
+; N/A   ; None         ; 7.094 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; data[6] ; control[0] ;
+; N/A   ; None         ; 7.094 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; data[6] ; control[0] ;
+; N/A   ; None         ; 7.094 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; data[6] ; control[0] ;
+; N/A   ; None         ; 7.094 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; data[6] ; control[0] ;
+; N/A   ; None         ; 7.094 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[6] ; control[0] ;
+; N/A   ; None         ; 7.064 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; data[1] ; control[0] ;
+; N/A   ; None         ; 7.064 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; data[1] ; control[0] ;
+; N/A   ; None         ; 7.064 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; data[1] ; control[0] ;
+; N/A   ; None         ; 7.064 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; data[1] ; control[0] ;
+; N/A   ; None         ; 7.064 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; data[1] ; control[0] ;
+; N/A   ; None         ; 7.064 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[1] ; control[0] ;
+; N/A   ; None         ; 6.884 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; data[4] ; control[0] ;
+; N/A   ; None         ; 6.884 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; data[4] ; control[0] ;
+; N/A   ; None         ; 6.884 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; data[4] ; control[0] ;
+; N/A   ; None         ; 6.884 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; data[4] ; control[0] ;
+; N/A   ; None         ; 6.884 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; data[4] ; control[0] ;
+; N/A   ; None         ; 6.884 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[4] ; control[0] ;
+; N/A   ; None         ; 6.830 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; data[7] ; control[0] ;
+; N/A   ; None         ; 6.830 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; data[7] ; control[0] ;
+; N/A   ; None         ; 6.830 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; data[7] ; control[0] ;
+; N/A   ; None         ; 6.830 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; data[7] ; control[0] ;
+; N/A   ; None         ; 6.830 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; data[7] ; control[0] ;
+; N/A   ; None         ; 6.830 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[7] ; control[0] ;
+; N/A   ; None         ; 6.823 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; data[3] ; control[0] ;
+; N/A   ; None         ; 6.823 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; data[3] ; control[0] ;
+; N/A   ; None         ; 6.823 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; data[3] ; control[0] ;
+; N/A   ; None         ; 6.823 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; data[3] ; control[0] ;
+; N/A   ; None         ; 6.823 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; data[3] ; control[0] ;
+; N/A   ; None         ; 6.823 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[3] ; control[0] ;
+; N/A   ; None         ; 6.774 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; data[2] ; control[0] ;
+; N/A   ; None         ; 6.774 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; data[2] ; control[0] ;
+; N/A   ; None         ; 6.774 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; data[2] ; control[0] ;
+; N/A   ; None         ; 6.774 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; data[2] ; control[0] ;
+; N/A   ; None         ; 6.774 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; data[2] ; control[0] ;
+; N/A   ; None         ; 6.774 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[2] ; control[0] ;
+; N/A   ; None         ; 6.772 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; data[0] ; control[0] ;
+; N/A   ; None         ; 6.772 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; data[0] ; control[0] ;
+; N/A   ; None         ; 6.772 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; data[0] ; control[0] ;
+; N/A   ; None         ; 6.772 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; data[0] ; control[0] ;
+; N/A   ; None         ; 6.772 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; data[0] ; control[0] ;
+; N/A   ; None         ; 6.772 ns   ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; data[0] ; control[0] ;
+; N/A   ; None         ; 6.656 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]                       ; adr[2]  ; control[0] ;
+; N/A   ; None         ; 6.539 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0]                       ; adr[2]  ; control[0] ;
+; N/A   ; None         ; 6.451 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2]                       ; adr[2]  ; control[0] ;
+; N/A   ; None         ; 6.434 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0]                       ; adr[0]  ; control[0] ;
+; N/A   ; None         ; 6.102 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]                       ; adr[5]  ; control[0] ;
+; N/A   ; None         ; 6.016 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]                       ; adr[4]  ; control[0] ;
+; N/A   ; None         ; 5.985 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0]                       ; adr[5]  ; control[0] ;
+; N/A   ; None         ; 5.933 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3]                       ; adr[5]  ; control[0] ;
+; N/A   ; None         ; 5.925 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2]                       ; adr[5]  ; control[0] ;
+; N/A   ; None         ; 5.899 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0]                       ; adr[4]  ; control[0] ;
+; N/A   ; None         ; 5.894 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4]                       ; adr[5]  ; control[0] ;
+; N/A   ; None         ; 5.878 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]                       ; adr[1]  ; control[0] ;
+; N/A   ; None         ; 5.847 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[3]                       ; adr[4]  ; control[0] ;
+; N/A   ; None         ; 5.839 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[2]                       ; adr[4]  ; control[0] ;
+; N/A   ; None         ; 5.789 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[0]                       ; adr[1]  ; control[0] ;
+; N/A   ; None         ; 5.787 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[5]                       ; adr[5]  ; control[0] ;
+; N/A   ; None         ; 5.786 ns   ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[4]                       ; adr[4]  ; control[0] ;
++-------+--------------+------------+--------------------------------------------------------------------------------------------------------------+---------+------------+
+
+
++-------------------------------------------------------------------+
+; tpd                                                               ;
++-------+-------------------+-----------------+------------+--------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From       ; To     ;
++-------+-------------------+-----------------+------------+--------+
+; N/A   ; None              ; 10.680 ns       ; address[2] ; adr[3] ;
+; N/A   ; None              ; 10.373 ns       ; address[0] ; adr[3] ;
+; N/A   ; None              ; 9.814 ns        ; address[1] ; adr[3] ;
+; N/A   ; None              ; 9.693 ns        ; address[3] ; adr[3] ;
+; N/A   ; None              ; 9.472 ns        ; address[2] ; adr[2] ;
+; N/A   ; None              ; 9.179 ns        ; address[0] ; adr[2] ;
+; N/A   ; None              ; 9.088 ns        ; address[0] ; adr[0] ;
+; N/A   ; None              ; 8.932 ns        ; address[2] ; adr[5] ;
+; N/A   ; None              ; 8.846 ns        ; address[2] ; adr[4] ;
+; N/A   ; None              ; 8.625 ns        ; address[0] ; adr[5] ;
+; N/A   ; None              ; 8.620 ns        ; address[1] ; adr[2] ;
+; N/A   ; None              ; 8.539 ns        ; address[0] ; adr[4] ;
+; N/A   ; None              ; 8.445 ns        ; address[5] ; adr[5] ;
+; N/A   ; None              ; 8.429 ns        ; address[0] ; adr[1] ;
+; N/A   ; None              ; 8.066 ns        ; address[1] ; adr[5] ;
+; N/A   ; None              ; 8.064 ns        ; address[4] ; adr[5] ;
+; N/A   ; None              ; 7.980 ns        ; address[1] ; adr[4] ;
+; N/A   ; None              ; 7.973 ns        ; address[3] ; adr[5] ;
+; N/A   ; None              ; 7.943 ns        ; address[4] ; adr[4] ;
+; N/A   ; None              ; 7.887 ns        ; address[3] ; adr[4] ;
+; N/A   ; None              ; 7.835 ns        ; address[1] ; adr[1] ;
++-------+-------------------+-----------------+------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                                               ;
++---------------+-------------+-----------+------------+--------------------------------------------------------------------------------------------------------------+------------+
+; Minimum Slack ; Required th ; Actual th ; From       ; To                                                                                                           ; To Clock   ;
++---------------+-------------+-----------+------------+--------------------------------------------------------------------------------------------------------------+------------+
+; N/A           ; None        ; -2.490 ns ; control[2] ; inst6                                                                                                        ; control[0] ;
+; N/A           ; None        ; -3.307 ns ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; control[0] ;
+; N/A           ; None        ; -3.341 ns ; control[1] ; inst6                                                                                                        ; control[0] ;
+; N/A           ; None        ; -3.384 ns ; address[3] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ;
+; N/A           ; None        ; -3.406 ns ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; control[0] ;
+; N/A           ; None        ; -3.459 ns ; address[3] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A           ; None        ; -3.489 ns ; address[3] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A           ; None        ; -3.505 ns ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ;
+; N/A           ; None        ; -3.515 ns ; address[4] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A           ; None        ; -3.552 ns ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A           ; None        ; -3.580 ns ; address[4] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A           ; None        ; -3.582 ns ; address[1] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A           ; None        ; -3.866 ns ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; control[0] ;
+; N/A           ; None        ; -3.955 ns ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0 ; control[0] ;
+; N/A           ; None        ; -3.961 ns ; address[5] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A           ; None        ; -4.000 ns ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg1 ; control[0] ;
+; N/A           ; None        ; -4.064 ns ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ;
+; N/A           ; None        ; -4.111 ns ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A           ; None        ; -4.141 ns ; address[0] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
+; N/A           ; None        ; -4.159 ns ; address[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg2 ; control[0] ;
+; N/A           ; None        ; -4.371 ns ; address[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg3 ; control[0] ;
+; N/A           ; None        ; -4.418 ns ; address[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg4 ; control[0] ;
+; N/A           ; None        ; -4.448 ns ; address[2] ; lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5 ; control[0] ;
++---------------+-------------+-----------+------------+--------------------------------------------------------------------------------------------------------------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Oct 13 10:29:15 2020
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Lab4 -c Lab4 --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "control[0]" is an undefined clock
+Info: Clock "control[0]" Internal fmax is restricted to 500.0 MHz between source register "lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]" and destination memory "lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5"
+    Info: fmax restricted to Clock High delay (1.0 ns) plus Clock Low delay (1.0 ns) : restricted to 2.0 ns. Expand message to see actual delay path.
+        Info: + Longest register to memory delay is 1.565 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X25_Y1_N3; Fanout = 5; REG Node = 'lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]'
+            Info: 2: + IC(0.368 ns) + CELL(0.309 ns) = 0.677 ns; Loc. = LCCOMB_X25_Y1_N18; Fanout = 2; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~6'
+            Info: 3: + IC(0.000 ns) + CELL(0.035 ns) = 0.712 ns; Loc. = LCCOMB_X25_Y1_N20; Fanout = 2; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~10'
+            Info: 4: + IC(0.000 ns) + CELL(0.035 ns) = 0.747 ns; Loc. = LCCOMB_X25_Y1_N22; Fanout = 2; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~14'
+            Info: 5: + IC(0.000 ns) + CELL(0.035 ns) = 0.782 ns; Loc. = LCCOMB_X25_Y1_N24; Fanout = 1; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~18'
+            Info: 6: + IC(0.000 ns) + CELL(0.125 ns) = 0.907 ns; Loc. = LCCOMB_X25_Y1_N26; Fanout = 2; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~21'
+            Info: 7: + IC(0.527 ns) + CELL(0.131 ns) = 1.565 ns; Loc. = M512_X24_Y1; Fanout = 9; MEM Node = 'lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5'
+            Info: Total cell delay = 0.670 ns ( 42.81 % )
+            Info: Total interconnect delay = 0.895 ns ( 57.19 % )
+        Info: - Smallest clock skew is -0.162 ns
+            Info: + Shortest clock path from clock "control[0]" to destination memory is 2.334 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'control[0]'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 13; COMB Node = 'control[0]~clkctrl'
+                Info: 3: + IC(0.679 ns) + CELL(0.458 ns) = 2.334 ns; Loc. = M512_X24_Y1; Fanout = 9; MEM Node = 'lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5'
+                Info: Total cell delay = 1.312 ns ( 56.21 % )
+                Info: Total interconnect delay = 1.022 ns ( 43.79 % )
+            Info: - Longest clock path from clock "control[0]" to source register is 2.496 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'control[0]'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 13; COMB Node = 'control[0]~clkctrl'
+                Info: 3: + IC(0.681 ns) + CELL(0.618 ns) = 2.496 ns; Loc. = LCFF_X25_Y1_N3; Fanout = 5; REG Node = 'lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_bii:auto_generated|safe_q[1]'
+                Info: Total cell delay = 1.472 ns ( 58.97 % )
+                Info: Total interconnect delay = 1.024 ns ( 41.03 % )
+        Info: + Micro clock to output delay of source is 0.094 ns
+        Info: + Micro setup delay of destination is 0.022 ns
+Info: tsu for memory "lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5" (data pin = "address[2]", clock pin = "control[0]") is 4.673 ns
+    Info: + Longest pin to memory delay is 6.985 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_A6; Fanout = 2; PIN Node = 'address[2]'
+        Info: 2: + IC(4.759 ns) + CELL(0.516 ns) = 6.132 ns; Loc. = LCCOMB_X25_Y1_N20; Fanout = 2; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~10'
+        Info: 3: + IC(0.000 ns) + CELL(0.035 ns) = 6.167 ns; Loc. = LCCOMB_X25_Y1_N22; Fanout = 2; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~14'
+        Info: 4: + IC(0.000 ns) + CELL(0.035 ns) = 6.202 ns; Loc. = LCCOMB_X25_Y1_N24; Fanout = 1; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~18'
+        Info: 5: + IC(0.000 ns) + CELL(0.125 ns) = 6.327 ns; Loc. = LCCOMB_X25_Y1_N26; Fanout = 2; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~21'
+        Info: 6: + IC(0.527 ns) + CELL(0.131 ns) = 6.985 ns; Loc. = M512_X24_Y1; Fanout = 9; MEM Node = 'lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5'
+        Info: Total cell delay = 1.699 ns ( 24.32 % )
+        Info: Total interconnect delay = 5.286 ns ( 75.68 % )
+    Info: + Micro setup delay of destination is 0.022 ns
+    Info: - Shortest clock path from clock "control[0]" to destination memory is 2.334 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'control[0]'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 13; COMB Node = 'control[0]~clkctrl'
+        Info: 3: + IC(0.679 ns) + CELL(0.458 ns) = 2.334 ns; Loc. = M512_X24_Y1; Fanout = 9; MEM Node = 'lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg5'
+        Info: Total cell delay = 1.312 ns ( 56.21 % )
+        Info: Total interconnect delay = 1.022 ns ( 43.79 % )
+Info: tco from clock "control[0]" to destination pin "data[5]" through memory "lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0" is 8.356 ns
+    Info: + Longest clock path from clock "control[0]" to source memory is 2.334 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'control[0]'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 13; COMB Node = 'control[0]~clkctrl'
+        Info: 3: + IC(0.679 ns) + CELL(0.458 ns) = 2.334 ns; Loc. = M512_X24_Y1; Fanout = 9; MEM Node = 'lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0'
+        Info: Total cell delay = 1.312 ns ( 56.21 % )
+        Info: Total interconnect delay = 1.022 ns ( 43.79 % )
+    Info: + Micro clock to output delay of source is 0.140 ns
+    Info: + Longest memory to pin delay is 5.882 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = M512_X24_Y1; Fanout = 9; MEM Node = 'lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|ram_block1a0~porta_address_reg0'
+        Info: 2: + IC(0.000 ns) + CELL(1.793 ns) = 1.793 ns; Loc. = M512_X24_Y1; Fanout = 1; MEM Node = 'lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_7g71:auto_generated|q_a[5]'
+        Info: 3: + IC(1.945 ns) + CELL(2.144 ns) = 5.882 ns; Loc. = PIN_U19; Fanout = 0; PIN Node = 'data[5]'
+        Info: Total cell delay = 3.937 ns ( 66.93 % )
+        Info: Total interconnect delay = 1.945 ns ( 33.07 % )
+Info: Longest tpd from source pin "address[2]" to destination pin "adr[3]" is 10.680 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_A6; Fanout = 2; PIN Node = 'address[2]'
+    Info: 2: + IC(4.759 ns) + CELL(0.516 ns) = 6.132 ns; Loc. = LCCOMB_X25_Y1_N20; Fanout = 2; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~10'
+    Info: 3: + IC(0.000 ns) + CELL(0.125 ns) = 6.257 ns; Loc. = LCCOMB_X25_Y1_N22; Fanout = 2; COMB Node = 'lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|add_sub_clh:auto_generated|op_1~13'
+    Info: 4: + IC(2.377 ns) + CELL(2.046 ns) = 10.680 ns; Loc. = PIN_C9; Fanout = 0; PIN Node = 'adr[3]'
+    Info: Total cell delay = 3.544 ns ( 33.18 % )
+    Info: Total interconnect delay = 7.136 ns ( 66.82 % )
+Info: th for register "inst6" (data pin = "control[2]", clock pin = "control[0]") is -2.490 ns
+    Info: + Longest clock path from clock "control[0]" to destination register is 2.496 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'control[0]'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 13; COMB Node = 'control[0]~clkctrl'
+        Info: 3: + IC(0.681 ns) + CELL(0.618 ns) = 2.496 ns; Loc. = LCFF_X25_Y1_N29; Fanout = 3; REG Node = 'inst6'
+        Info: Total cell delay = 1.472 ns ( 58.97 % )
+        Info: Total interconnect delay = 1.024 ns ( 41.03 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 5.135 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_W2; Fanout = 1; PIN Node = 'control[2]'
+        Info: 2: + IC(4.097 ns) + CELL(0.053 ns) = 4.980 ns; Loc. = LCCOMB_X25_Y1_N28; Fanout = 1; COMB Node = 'inst6~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 5.135 ns; Loc. = LCFF_X25_Y1_N29; Fanout = 3; REG Node = 'inst6'
+        Info: Total cell delay = 1.038 ns ( 20.21 % )
+        Info: Total interconnect delay = 4.097 ns ( 79.79 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 180 megabytes
+    Info: Processing ended: Tue Oct 13 10:29:16 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
