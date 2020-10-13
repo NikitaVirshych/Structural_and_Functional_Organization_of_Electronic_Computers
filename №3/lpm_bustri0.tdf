@@ -38,23 +38,23 @@ INCLUDE "lpm_bustri.inc";
 
 SUBDESIGN lpm_bustri0
 (
-	data[8..0]	 : INPUT;
+	data[7..0]	 : INPUT;
 	enabledt	 : INPUT;
-	tridata[8..0]	 : BIDIR;
+	tridata[7..0]	 : BIDIR;
 )
 
 VARIABLE
 
 	lpm_bustri_component : lpm_bustri WITH (
 			LPM_TYPE = "LPM_BUSTRI",
-			LPM_WIDTH = 9
+			LPM_WIDTH = 8
 			);
 
 BEGIN
 
-	tridata[8..0] = lpm_bustri_component.tridata[8..0];
+	tridata[7..0] = lpm_bustri_component.tridata[7..0];
 	lpm_bustri_component.enabledt = enabledt;
-	lpm_bustri_component.data[8..0] = data[8..0];
+	lpm_bustri_component.data[7..0] = data[7..0];
 END;
 
 
@@ -65,14 +65,14 @@ END;
 -- Retrieval info: PRIVATE: BiDir NUMERIC "0"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Stratix II"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
--- Retrieval info: PRIVATE: nBit NUMERIC "9"
+-- Retrieval info: PRIVATE: nBit NUMERIC "8"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_BUSTRI"
--- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "9"
--- Retrieval info: USED_PORT: data 0 0 9 0 INPUT NODEFVAL data[8..0]
+-- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "8"
+-- Retrieval info: USED_PORT: data 0 0 8 0 INPUT NODEFVAL data[7..0]
 -- Retrieval info: USED_PORT: enabledt 0 0 0 0 INPUT NODEFVAL enabledt
--- Retrieval info: USED_PORT: tridata 0 0 9 0 BIDIR NODEFVAL tridata[8..0]
--- Retrieval info: CONNECT: tridata 0 0 9 0 @tridata 0 0 9 0
--- Retrieval info: CONNECT: @data 0 0 9 0 data 0 0 9 0
+-- Retrieval info: USED_PORT: tridata 0 0 8 0 BIDIR NODEFVAL tridata[7..0]
+-- Retrieval info: CONNECT: tridata 0 0 8 0 @tridata 0 0 8 0
+-- Retrieval info: CONNECT: @data 0 0 8 0 data 0 0 8 0
 -- Retrieval info: CONNECT: @enabledt 0 0 0 0 enabledt 0 0 0 0
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_bustri0.tdf TRUE

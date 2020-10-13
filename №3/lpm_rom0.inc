@@ -16,9 +16,13 @@
 FUNCTION lpm_rom0 
 (
 	address[5..0],
-	clock
+	inclock,
+	inclocken,
+	outaclr,
+	outclock,
+	outclocken
 )
 
 RETURNS (
-	q[8..0]
+	q[7..0]
 );

@@ -47,7 +47,6 @@ SUBDESIGN lpm_counter0
 VARIABLE
 
 	lpm_counter_component : lpm_counter WITH (
-			LPM_AVALUE = "1",
 			LPM_DIRECTION = "UP",
 			LPM_PORT_UPDOWN = "PORT_UNUSED",
 			LPM_TYPE = "LPM_COUNTER",
@@ -70,7 +69,7 @@ END;
 -- Retrieval info: PRIVATE: ACLR NUMERIC "1"
 -- Retrieval info: PRIVATE: ALOAD NUMERIC "0"
 -- Retrieval info: PRIVATE: ASET NUMERIC "1"
--- Retrieval info: PRIVATE: ASET_ALL1 NUMERIC "0"
+-- Retrieval info: PRIVATE: ASET_ALL1 NUMERIC "1"
 -- Retrieval info: PRIVATE: CLK_EN NUMERIC "0"
 -- Retrieval info: PRIVATE: CNT_EN NUMERIC "0"
 -- Retrieval info: PRIVATE: CarryIn NUMERIC "0"
@@ -85,7 +84,6 @@ END;
 -- Retrieval info: PRIVATE: SSET_ALL1 NUMERIC "1"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 -- Retrieval info: PRIVATE: nBit NUMERIC "6"
--- Retrieval info: CONSTANT: LPM_AVALUE STRING "1"
 -- Retrieval info: CONSTANT: LPM_DIRECTION STRING "UP"
 -- Retrieval info: CONSTANT: LPM_PORT_UPDOWN STRING "PORT_UNUSED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COUNTER"

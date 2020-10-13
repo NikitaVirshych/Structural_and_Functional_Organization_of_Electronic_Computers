@@ -55,7 +55,7 @@ BEGIN
 
 	AeB = lpm_compare_component.AeB;
 	lpm_compare_component.dataa[5..0] = dataa[5..0];
-	lpm_compare_component.datab[5..0] = 3;
+	lpm_compare_component.datab[5..0] = 5;
 END;
 
 
@@ -72,7 +72,7 @@ END;
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Stratix II"
 -- Retrieval info: PRIVATE: LPM_PIPELINE NUMERIC "0"
 -- Retrieval info: PRIVATE: Latency NUMERIC "0"
--- Retrieval info: PRIVATE: PortBValue NUMERIC "3"
+-- Retrieval info: PRIVATE: PortBValue NUMERIC "5"
 -- Retrieval info: PRIVATE: Radix NUMERIC "10"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 -- Retrieval info: PRIVATE: SignedCompare NUMERIC "0"
@@ -88,7 +88,7 @@ END;
 -- Retrieval info: USED_PORT: dataa 0 0 6 0 INPUT NODEFVAL dataa[5..0]
 -- Retrieval info: CONNECT: AeB 0 0 0 0 @AeB 0 0 0 0
 -- Retrieval info: CONNECT: @dataa 0 0 6 0 dataa 0 0 6 0
--- Retrieval info: CONNECT: @datab 0 0 6 0 3 0 0 0 0
+-- Retrieval info: CONNECT: @datab 0 0 6 0 5 0 0 0 0
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_compare0.tdf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_compare0.inc TRUE
