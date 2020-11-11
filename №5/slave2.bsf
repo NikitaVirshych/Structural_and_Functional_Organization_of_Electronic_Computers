@@ -31,11 +31,25 @@ applicable agreement for further details.
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
+		(pt 0 48)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 43 44 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
 		(pt 168 32)
 		(output)
 		(text "OUT[7..0]" (rect 0 0 53 14)(font "Arial" (font_size 8)))
 		(text "OUT[7..0]" (rect 94 27 147 41)(font "Arial" (font_size 8)))
 		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "FIN" (rect 0 0 17 14)(font "Arial" (font_size 8)))
+		(text "FIN" (rect 130 43 147 57)(font "Arial" (font_size 8)))
+		(line (pt 168 48)(pt 152 48)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 152 80)(line_width 1))

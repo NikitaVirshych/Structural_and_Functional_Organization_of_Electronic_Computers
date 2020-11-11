@@ -39,7 +39,7 @@ applicable agreement for further details.
 	)
 	(drawing
 		(text "compare" (rect 76 17 112 29)(font "Arial" ))
-		(text "datab[]=5" (rect 20 58 65 71)(font "Arial" (font_size 8)))
+		(text "datab[]=4" (rect 20 58 65 71)(font "Arial" (font_size 8)))
 		(line (pt 16 16)(pt 112 16)(line_width 1))
 		(line (pt 112 16)(pt 112 80)(line_width 1))
 		(line (pt 112 80)(pt 16 80)(line_width 1))

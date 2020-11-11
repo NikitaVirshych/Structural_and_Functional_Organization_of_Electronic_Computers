@@ -1,5 +1,5 @@
 Assembler report for Lab5
-Sun Nov 08 19:08:08 2020
+Wed Nov 11 23:29:02 2020
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,9 +38,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Nov 08 19:08:08 2020 ;
+; Assembler Status      ; Successful - Wed Nov 11 23:29:02 2020 ;
 ; Revision Name         ; Lab5                                  ;
-; Top-level Entity Name ; Arbiter                               ;
+; Top-level Entity Name ; Lab5                                  ;
 ; Family                ; Stratix II                            ;
 ; Device                ; EP2S15F484C3                          ;
 +-----------------------+---------------------------------------+
@@ -96,7 +96,7 @@ applicable agreement for further details.
 +----------------+-----------------------------------------------------+
 ; Device         ; EP2S15F484C3                                        ;
 ; JTAG usercode  ; 0xFFFFFFFF                                          ;
-; Checksum       ; 0x00279EB1                                          ;
+; Checksum       ; 0x002964B3                                          ;
 +----------------+-----------------------------------------------------+
 
 
@@ -107,7 +107,7 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------+
 ; Device             ; EPC16                                           ;
 ; JTAG usercode      ; 0xFFFFFFFF                                      ;
-; Checksum           ; 0x1EF57F87                                      ;
+; Checksum           ; 0x1EEDECA7                                      ;
 ; Compression Ratio  ; 3                                               ;
 +--------------------+-------------------------------------------------+
 
@@ -118,14 +118,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Nov 08 19:08:06 2020
+    Info: Processing started: Wed Nov 11 23:29:00 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab5 -c Lab5
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 235 megabytes
-    Info: Processing ended: Sun Nov 08 19:08:08 2020
+    Info: Peak virtual memory: 236 megabytes
+    Info: Processing ended: Wed Nov 11 23:29:02 2020
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
